@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Fetcher</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="navbar">
@@ -13,6 +13,11 @@
         <li><a href="./index.html">Home</a></li>
         <li><a href="./About.html">About</a></li>
     </ul>
-    </div>
+</div>
+<button onclick="fetchImage()">Get a Random Image</button><br>
+<div class="main">
+<img src="" alt="Random Image" id="random_image">
+</div>
+
 </body>
 </html>
