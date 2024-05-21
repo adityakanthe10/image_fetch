@@ -263,3 +263,12 @@ img{
         display: block;
     }
 }
+
+/* About CSS */
+
+h1{
+    padding: 10px;
+}
+.desc{
+    padding: 10px;
+}
