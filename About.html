@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image_Splash</title>
+      <!-- Typed JS -->
+      <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Image_Splash </h1>
+    <h1 class="txt"></h1>
     <h2>Is a fun project to play around with built using Unsplash API. </h2>
-    <p class="desc">Random Image on Click is a dynamic web project designed to bring the beauty and diversity of the world's photography to your screen with just a click. Leveraging the powerful Unsplash API, this project allows users to fetch random images and explore curated photo collections based on specific search queries. Whether you want to discover new landscapes, urban scenes, or abstract art, this project provides an engaging and visually stimulating experience.</p>
+    <p class="desc"><span><a href="index.html">Image_Splash</a></span> is a dynamic web project designed to bring the beauty and diversity of the world's photography to your screen with just a click. Leveraging the powerful Unsplash API. This project allows users to fetch random images and explore curated photo collections based on specific search queries. Whether you want to discover new landscapes, urban scenes, or abstract art, this project provides an engaging and visually stimulating experience.</p>
+    <div class="main-pagelink">
+    <a href="index.html">Back to Main Page</a>
+</div>
 </body>
+<script>
+    const typed = new Typed(".txt",{
+        strings:["Image_Splash ::",],
+        typeSpeed:90,
+        backSpeed:70,
+        backDelay:500,
+        loop:true,
+    })
+</script>
 </html>

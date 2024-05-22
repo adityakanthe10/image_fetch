@@ -28,10 +28,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = get("#searchInput");
   const searchButton = get(".search");
 
+  //  Retrieve the last searched query from localStorage
+  const storedQuery = localStorage.getItem("lastSearched");
+  if (storedQuery) {
+    searchInput.value = storedQuery;
+  }
   searchButton.addEventListener("click", (e) => {
     e.preventDefault();
-    if (searchInput.value !== "") {
-      getRender(searchInput.value);
+    const query = searchInput.value.trim();
+    if (query !== "") {
+      localStorage.setItem("lastSearched", query);
+      getRender(query);
     } else {
       alert("Please enter a valid query");
     }
@@ -73,14 +80,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const imgElement1 = document.createElement("img");
         imgElement1.src = photo.urls.small;
         imgElement1.alt = photo.title || "Collection Photo";
+        imgElement1.className = "dynamic-image";
         container.appendChild(imgElement1);
       });
     });
   }
   // Scroll Reveal
-  ScrollReveal().reveal(".main-content img", {
-    interval: 200, // Adjust the interval as needed
-    delay: 250, // Optional delay before revealing
+  ScrollReveal().reveal(".dynamic-image", {
+    interval: 200,
+    delay: 250,
     reset: true,
   });
   getRender("Mountains");
