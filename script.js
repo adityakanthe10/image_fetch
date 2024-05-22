@@ -1,30 +1,19 @@
-//  Random Image on click
-window.fetchRandomImage = async function () {
-  const accesskey = "6Bfu-CpadHxLBVtuCRajTtjaLWBA8l7RdJqk_0E2Of4";
-
-  const api_url = "https://api.unsplash.com/photos/random";
-  try {
-    const response = await fetch(api_url, {
-      headers: {
-        Authorization: `Client-ID ${accesskey}`,
-      },
-    });
-    // console.log(response);
-
-    if (!response.ok) {
-      throw new Error("Could not fetch resource");
-    }
-    const data = await response.json();
-
-    const get_image = data.urls.regular;
-    const imgElement = document.getElementById("random_image");
-    imgElement.src = get_image;
-    // console.log(data);
-  } catch (error) {
-    console.log(error);
-  }
+// 768px responsive
+let header = document.querySelector("#navbar");
+let menu = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".nav-links");
+window.addEventListener("scroll", () => {
+  header.classList.toggle("shadow", window.scrollY > 0);
+});
+menu.onclick = () => {
+  navbar.classList.toggle("active");
 };
-fetchRandomImage();
+
+window.onscroll = () => {
+  navbar.classList.remove("active");
+};
+
+//  Random Image on click
 
 document.addEventListener("DOMContentLoaded", function () {
   //  Get a single page of collection results for a query
