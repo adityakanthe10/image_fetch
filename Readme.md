@@ -9,11 +9,11 @@ Image_Splash is a dynamic web project designed to bring the beauty and diversity
 - [HTML5,CSS3,Javascript,Unsplash API,Typed.js,ScrollReveal.js](#technologies-used)
 - [Getting Started](#getting-started)
 - [File Structure](#file-structure)
-- [License](#license)
 
 ## Demo
 
-You can view a live demo of this project [here](#).
+You can check out a demo of the project [here](https://drive.google.com/file/d/1bgQ3e7pK0Y1fLyY8ujxJU9xQYg2qrR6j/view?usp=sharing).
+
 
 ## Features
 
